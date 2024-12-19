@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Raja Ampat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        .post {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .post h2 {
+            margin-top: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        button {
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .img-raja {
+            display: block;
+            margin: 0 auto;
+            width: 100%; /* Memastikan gambar mengisi lebar penuh */
+            height: auto; /* Tinggi otomatis untuk menjaga proporsi */
+            max-height: 1200px; /* Atur tinggi maksimum sesuai kebutuhan */
+            object-fit: cover; /* Memastikan gambar mengisi area tanpa terpotong */
+            border-radius: 5px;
+        }
+        .img-responsive {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 20px 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .back-home {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .back-home a {
+            text-decoration: none;
+            color: #fff;
+            background: #007bff;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .back-home a:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Blog Raja Ampat</h1>
+</header>
+
+<div class="container">
+    <div class="post">
+        <img class="img-raja" src="/asset/Raja Ampat.jpeg" alt="Raja Ampat">
+        <h2>Keindahan Raja Ampat</h2>
+        <p>Raja Ampat adalah surga bagi para penyelam dan pecinta alam, terkenal dengan keanekaragaman hayati bawah laut yang luar biasa dan pemandangan pulau-pulau yang menakjubkan.</p>
+        <button onclick="showMore()">Baca Selengkapnya</button>
+        <p id="more" style="display:none;">Raja Ampat terdiri dari lebih dari 1.500 pulau kecil, menawarkan berbagai aktivitas seperti snorkeling, diving, dan trekking.</p>
+    </div>
+
+    <div class="post">
+        <h2>Destinasi Wisata di Raja Ampat</h2>
+        
+        <h3>Pulau Wayag</h3>
+        <img class="img-responsive" src="/asset/pulau wayag.jpg" alt="Pulau Wayag">
+        <p>Pulau Wayag terkenal dengan pemandangan karst yang spektakuler dan laguna biru yang jernih.</p>
+
+        <h3>Pulau Misool</h3>
+        <img class="img-responsive" src="/asset/pulau misool.jpg" alt="Pulau Misool">
+        <p>Pulau Misool adalah tempat yang ideal untuk snorkeling dan diving, dengan terumbu karang yang indah.</p>
+
+        <h3>Piaynemo</h3>
+        <img class="img-responsive" src="/asset/piaynemo.jpg" alt="Piaynemo">
+        <p>Piaynemo menawarkan pemandangan yang menakjubkan dari atas bukit, dengan pulau-pulau kecil yang dikelilingi laut biru.</p>
+    </div>
+
+    <div class="post">
+        <h2>Harga Tiket Masuk</h2>
+        <p>Harga tiket masuk ke beberapa destinasi di Raja Ampat adalah sebagai berikut:</p>
+        <ul>
+            <li><strong>Raja Ampat Marine Park:</strong> Rp 1.000.000 per orang untuk tiket masuk.</li>
+        </ul>
+    </div>
+
+    <div class="post">
+        <h2>Tips Perjalanan ke Raja Ampat</h2>
+        <ul>
+            <li>Waktu terbaik untuk berkunjung adalah saat musim kemarau (Oktober hingga April).</li>
+            <li>Rencanakan perjalanan dengan baik, karena akses ke Raja Ampat bisa sulit dan memerlukan waktu.</li>
+        </ul>
+    </div>
+
+    <div class="post">
+        <h2>Video tentang Raja Ampat</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Du-NlJ9JNF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="back-home">
+        <a href="index.html">Kembali ke Home</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Blog Raja Ampat. Semua hak dilindungi.</p>
+</footer>
+
+<script>
+    function showMore() {
+        var moreText = document.getElementById("more");
+        if (moreText.style.display === "none") {
+            moreText.style.display = "block";
+        } else {
+            moreText.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

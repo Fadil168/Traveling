@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Mandalika</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        .post {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .post h2 {
+            margin-top: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        button {
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .img-mandalika {
+            display: block;
+            margin: 0 auto;
+            width: 100%; /* Memastikan gambar mengisi lebar penuh */
+            height: auto; /* Tinggi otomatis untuk menjaga proporsi */
+            max-height: 1200px; /* Atur tinggi maksimum sesuai kebutuhan */
+            object-fit: cover; /* Memastikan gambar mengisi area tanpa terpotong */
+            border-radius: 5px;
+        }
+        .img-responsive {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 20px 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .back-home {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .back-home a {
+            text-decoration: none;
+            color: #fff;
+            background: #007bff;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .back-home a:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Blog Mandalika</h1>
+</header>
+
+<div class="container">
+    <div class="post">
+        <img class="img-mandalika" src="/asset/mandalika.jpg" alt="Mandalika">
+        <h2>Keindahan Mandalika</h2>
+        <p>Mandalika adalah destinasi wisata yang terkenal dengan pantai-pantainya yang indah dan suasana yang tenang. Terletak di Lombok Tengah, Mandalika menawarkan pengalaman liburan yang tak terlupakan.</p>
+        <button onclick="showMore()">Baca Selengkapnya</button>
+        <p id="more" style="display:none;">Mandalika juga dikenal sebagai lokasi MotoGP dan memiliki banyak resort mewah serta tempat wisata menarik lainnya.</p>
+    </div>
+
+    <div class="post">
+        <h2>Destinasi Wisata di Mandalika</h2>
+        
+        <h3>Pantai Kuta Mandalika</h3>
+        <img class="img-responsive" src="/asset/pantai kuta.jpg" alt="Pantai Kuta Mandalika">
+        <p>Pantai Kuta Mandalika terkenal dengan pasir putihnya yang halus dan ombak yang cocok untuk bers elancar.</p>
+
+        <h3>Pantai Tanjung Aan</h3>
+        <img class="img-responsive" src="/asset/pantai tanjung aan.jpg" alt="Pantai Tanjung Aan">
+        <p>Pantai Tanjung Aan memiliki pemandangan yang menakjubkan dan merupakan tempat yang ideal untuk bersantai.</p>
+
+        <h3>Desa Sade</h3>
+        <img class="img-responsive" src="/asset/desa sade.jpg" alt="Desa Sade">
+        <p>Desa Sade adalah desa tradisional Sasak yang menawarkan pengalaman budaya yang unik.</p>
+    </div>
+
+    <div class="post">
+        <h2>Harga Tiket Masuk</h2>
+        <p>Harga tiket masuk ke beberapa destinasi di Mandalika adalah sebagai berikut:</p>
+        <ul>
+            <li><strong>Pantai Kuta Mandalika:</strong> Gratis.</li>
+            <li><strong>Pantai Tanjung Aan:</strong> Gratis.</li>
+            <li><strong>Desa Sade:</strong> Rp 10.000 per orang.</li>
+        </ul>
+    </div>
+
+    <div class="post">
+        <h2>Tips Perjalanan ke Mandalika</h2>
+        <ul>
+            <li>Waktu terbaik untuk berkunjung adalah saat musim kemarau (April hingga Oktober).</li>
+            <li>Jaga kebersihan dengan tidak membuang sampah sembarangan di tempat wisata.</li>
+        </ul>
+    </div>
+
+    <div class="post">
+        <h2>Video tentang Mandalika</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/no5dtX9ZQik" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="back-home">
+        <a href="index.html">Kembali ke Home</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Blog Mandalika. Semua hak dilindungi.</p>
+</footer>
+
+<script>
+    function showMore() {
+        var moreText = document.getElementById("more");
+        if (moreText.style.display === "none") {
+            moreText.style.display = "block";
+        } else {
+            moreText.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

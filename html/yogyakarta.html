@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Yogyakarta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        .post {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .post h2 {
+            margin-top: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        button {
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .img-jogja {
+            display: block;
+            margin: 0 auto;
+            width: 100%; /* Memastikan gambar mengisi lebar penuh */
+            height: auto; /* Tinggi otomatis untuk menjaga proporsi */
+            max-height: 1200px; /* Atur tinggi maksimum sesuai kebutuhan */
+            object-fit: cover; /* Memastikan gambar mengisi area tanpa terpotong */
+            border-radius: 5px;
+        }
+        .img-responsive {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 20px 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .back-home {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .back-home a {
+            text-decoration: none;
+            color: #fff;
+            background: #007bff;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .back-home a:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Blog Yogyakarta</h1>
+</header>
+
+<div class="container">
+    <div class="post">
+        <img class="img-jogja" src="/asset/Yogyakarta.jpg" alt="Yogyakarta">
+        <h2>Keindahan Yogyakarta</h2>
+        <p>Yogyakarta adalah kota budaya yang kaya akan sejarah dan tradisi. Dikenal dengan keraton, candi, dan seni, Yogyakarta menawarkan pengalaman yang unik bagi para wisatawan.</p>
+        <button onclick="showMore()">Baca Selengkapnya</button>
+        <p id="more" style="display:none;">Yogyakarta juga terkenal dengan kuliner khasnya, seperti gudeg dan bakpia, serta kerajinan tangan yang menarik.</p>
+    </div>
+
+    <div class="post">
+        <h2>Destinasi Wisata di Yogyakarta</h2>
+        
+        <h3>Candi Borobudur</h3>
+        <img class="img-responsive" src="/asset/candi borobudur.jpg" alt="Candi Borobudur">
+        <p>Candi Borobudur adalah candi Buddha terbesar di dunia dan merupakan salah satu Warisan Dunia UNESCO.</p>
+
+        <h3>Candi Prambanan</h3>
+        <img class="img-responsive" src="/asset/candi prambanan.jpg" alt="Candi Prambanan">
+        <p>Candi Prambanan adalah kompleks candi Hindu yang megah dan juga terdaftar sebagai Warisan Dunia UNESCO.</p>
+
+        <h3>Keraton Yogyakarta</h3>
+        <img class="img-responsive" src="/asset/kraton.jpg" alt="Keraton Yogyakarta">
+        <p>Keraton Yogyakarta adalah istana resmi Sultan Yogyakarta, menawarkan wawasan tentang budaya dan sejarah lokal.</p>
+
+        <h3>Gunung Merapi</h3>
+        <img class="img-responsive" src="/asset/gunung merapi.jpg" alt="Gunung Merapi">
+        <p>Gunung Merapi adalah gunung berapi aktif yang menawarkan trekking dan pemandangan alam yang menakjubkan.</p>
+
+        <h3>Jalan Malioboro</h3>
+        <img class="img-responsive" src="/asset/jalan malioboro.jpg" alt="Jalan Malioboro">
+        <p>Jalan Malioboro adalah pusat perbelanjaan dan kuliner yang terkenal, ideal untuk berbelanja oleh-oleh.</p>
+    </div>
+
+    <div class="post">
+        <h2>Harga Tiket Masuk</h2>
+        <p>Harga tiket masuk ke beberapa destinasi di Yogyakarta adalah sebagai berikut:</p>
+        <ul>
+            <li><strong>Candi Borobudur:</strong> Rp 50.000 per orang.</li>
+            <li><strong>Candi Prambanan:</strong> Rp 50.000 per orang.</li>
+            <li><strong>Keraton Yogyakarta:</strong> Rp 15.000 per orang.</li>
+        </ul>
+    </div>
+
+    <div class="post">
+        <h2>Tips Perjalanan ke Yogyakarta</h2>
+        <ul>
+            <li>Waktu terbaik untuk berkunjung adalah saat musim kemarau (April hingga Oktober).</li>
+            <li>Jangan lupa mencicipi kuliner khas Yogyakarta dan membeli oleh-oleh lokal.</li>
+        </ul>
+    </div>
+
+    <div class="post">
+        <h2>Video tentang Yogyakarta</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/aoHPuyR3f24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="back-home">
+        <a href="index.html">Kembali ke Home</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Blog Yogyakarta. Semua hak dilindungi.</p>
+</footer>
+
+<script>
+    function showMore() {
+        var moreText = document.getElementById("more");
+        if (moreText.style.display === "none") {
+            moreText.style.display = "block";
+        } else {
+            moreText.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Labuan Bajo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        .post {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .post h2 {
+            margin-top: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        button {
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .img-labuan {
+            display: block;
+            margin: 0 auto;
+            width: 100%; /* Memastikan gambar mengisi lebar penuh */
+            height: auto; /* Tinggi otomatis untuk menjaga proporsi */
+            max-height: 1200px; /* Atur tinggi maksimum sesuai kebutuhan */
+            object-fit: cover; /* Memastikan gambar mengisi area tanpa terpotong */
+            border-radius: 5px;
+        }
+        .img-responsive {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 20px 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .back-home {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .back-home a {
+            text-decoration: none;
+            color: #fff;
+            background: #007bff;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .back-home a:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Blog Labuan Bajo</h1>
+</header>
+
+<div class="container">
+    <div class="post">
+        <img class="img-labuan" src="/asset/Labuan Bajo.jpeg" alt="Labuan Bajo">
+        <h2>Keindahan Labuan Bajo</h2>
+        <p>Labuan Bajo adalah pintu gerbang menuju Taman Nasional Komodo, terkenal dengan keindahan alamnya dan budaya lokal yang kaya.</p>
+        <button onclick="showMore()">Baca Selengkapnya</button>
+        <p id="more" style="display:none;">Labuan Bajo menawarkan berbagai aktivitas seperti snorkeling, diving, dan trekking di pulau-pulau sekitarnya.</p>
+    </div>
+
+    <div class="post">
+        <h2>Destinasi Wisata di Labuan Bajo</h2>
+        
+        <h3>Pulau Komodo</h3>
+        <img class="img-responsive" src="/asset/pulau komodo.jpg" alt="Pulau Komodo">
+        <p>Pulau Komodo adalah rumah bagi komodo, kadal terbesar di dunia , dan menawarkan pemandangan alam yang menakjubkan.</p>
+
+        <h3>Pulau Rinca</h3>
+        <img class="img-responsive" src="/asset/pulau rinca.jpg" alt="Pulau Rinca">
+        <p>Pulau Rinca juga merupakan tempat yang baik untuk melihat komodo dan menikmati trekking di alam liar.</p>
+
+        <h3>Pink Beach</h3>
+        <img class="img-responsive" src="/asset/pink beach.jpg" alt="Pink Beach">
+        <p>Pink Beach terkenal dengan pasirnya yang berwarna pink, ideal untuk bersantai dan snorkeling.</p>
+    </div>
+
+    <div class="post">
+        <h2>Harga Tiket Masuk</h2>
+        <p>Harga tiket masuk ke beberapa destinasi di Labuan Bajo adalah sebagai berikut:</p>
+        <ul>
+            <li><strong>Pulau Komodo:</strong> Rp 150.000 per orang.</li>
+            <li><strong>Pulau Rinca:</strong> Rp 100.000 per orang.</li>
+        </ul>
+    </div>
+
+    <div class="post">
+        <h2>Tips Perjalanan ke Labuan Bajo</h2>
+        <ul>
+            <li>Waktu terbaik untuk berkunjung adalah saat musim kemarau (April hingga November).</li>
+            <li>Rencanakan perjalanan dengan baik, terutama untuk tour ke pulau-pulau.</li>
+        </ul>
+    </div>
+
+    <div class="post">
+        <h2>Video tentang Labuan Bajo</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/T9IXjEZ0V3I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="back-home">
+        <a href="index.html">Kembali ke Home</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Blog Labuan Bajo. Semua hak dilindungi.</p>
+</footer>
+
+<script>
+    function showMore() {
+        var moreText = document.getElementById("more");
+        if (moreText.style.display === "none") {
+            moreText.style.display = "block";
+        } else {
+            moreText.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
